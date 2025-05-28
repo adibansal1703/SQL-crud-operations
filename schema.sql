@@ -1,0 +1,10 @@
+-- -- create table users(
+-- --     id varchar(255) primary key,
+-- --     username varchar(255) unique not null,
+-- --     email varchar(255) not null,
+-- --     password varchar(255) not null
+-- -- );
+-- insert into users
+-- (id,username,email,password)
+-- values
+-- (11,"adibansal_17","adi123@gmail.com","123d")

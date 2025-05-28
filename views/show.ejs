@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All users</title>
+    <style>
+      button{
+        padding: 10px;
+        margin: 10px;
+        font-size: 20px;
+        border: 1px solid grey;
+        border-radius: 3px;
+        background-color: azure;
+      }
+    </style>
+  </head>
+  <body>
+    <table border="1">
+      <tr>
+        <th>ID</th>
+        <th>Username</th>
+        <th>Email</th>
+      </tr>
+      <% for(res of result){%>
+        <tr>
+            <td><%= res.id %></td>
+            <td><%= res.username %></td>
+            <td><%= res.email %></td>
+            <td>
+                <form method="get" action="users/<%=res.id%>/edit">
+                    <button>Edit username</button>
+                </form>
+            </td>
+        </tr>
+        <%}%>
+    </table>
+     <form method="get" action="/users/join">
+    <button>Join us!</button>
+    </form>
+    <form method="get" action="/users/delete">
+      <button>Delete</button>
+    </form>
+  </body>
+</html>
